@@ -1,0 +1,42 @@
+body{
+  margin: 0px;
+  background-color: green;
+}
+.arrowBack{
+  width: 100%;
+  /* height:1000px; */
+  height: 80vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.a1 {
+  background-image: url("./images/squiggle 1.jpg");
+}
+
+.a2 {
+  background-image: url("./images/squiggle 2.jpg");
+}
+
+.a3 {
+  background-image: url("./images/squiggle 3.jpg");
+}
+
+.between{
+  width:100%;
+  height:100px;
+  /* border:thick solid gray; */
+  padding:10px;
+  position: relative;
+}
+
+.circle {
+  position: absolute;
+  background-image: url("./images/circle.png");
+  width: 100px;
+  height: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
