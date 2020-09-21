@@ -29,7 +29,8 @@ $(window).on('scroll', function() {
   });
 
   if(winScroll > 100){
-    $('body').css({'background-color':'rgb('+255*winScroll/scrollLength+',255,0)'});
+    let colorValue = 255*winScroll/scrollLength;
+    $('body').css({'background-color':'rgb('+colorValue/3 + 170+',255,255)'});
   }
 
   $('.pattern').css({
@@ -40,28 +41,25 @@ $(window).on('scroll', function() {
   // console.log($('.expand').position().top);
 
   $('.p1').css({
-    'opacity': fade(200,500,"start",.9)
+    'opacity': fade(200,500,"start",.5)
   });
 
   $('.p2').css({
-    'opacity': fade(200,500,"end",.9)
+    'opacity': fade(200,500,"end",.5)
   });
 
-  if(winScroll > $('.e1').position().top - winHeight * .7 && winScroll < $('.e1').position().top - winHeight * .3){
-    $('.e1').addClass("expanded");
-    $('.e1').removeClass("expand");
-    let started = $('.e1').position().top - winHeight * .95;
-    console.log("start: " + started);
-    console.log("end: " + $('.e1').position().top + winHeight * .25);
-  }else{
-    $('.e1').addClass("expand");
-    $('.e1').removeClass("expanded");
-    console.log("false");
-  }
+  expand('.e1','hidden','expanded', winScroll);
+  expand('.e2','hidden','expanded', winScroll);
 
-  let bool = winScroll < $('.e1').position().top + winHeight * .25;
-  console.log(winHeight * .25);
-  console.log("bool: " + bool);
+  function expand(e, inactive, active, ws) {
+    if(ws > $(e).position().top - winHeight * .8 && ws < $(e).position().top - winHeight*.2) {
+      $(e).addClass(active);
+      $(e).removeClass(inactive);
+    } else {
+      $(e).addClass(inactive);
+      $(e).removeClass(active);
+    }
+  }
 
   function fade(enter,exit,startend,max){
     let op;
@@ -71,7 +69,5 @@ $(window).on('scroll', function() {
       op = (op < 0) ? 0 : op;
       return op;
   }
-
-
 
 });
