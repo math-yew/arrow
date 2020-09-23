@@ -1,0 +1,29 @@
+
+@font-face {
+  font-family: Shadows;
+  src: url('./fonts/shadowsintolight/ShadowsIntoLight.ttf');
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url('./fonts/roboto/Roboto-Regular.ttf');
+}
+
+@font-face {
+  font-family: Roboto-Bold;
+  src: url('./fonts/roboto/Roboto-Bold.ttf');
+}
+
+@keyframes piece {
+  0%   {transform: rotate(0deg); left:0px; top:0px;}
+  30%  {transform: rotate(-30deg);left:12vw; top:5vw;}
+  70%  {transform: rotate(45deg);left:6vw; top:15vw;}
+  100% {transform: rotate(75deg);left:-5vw; top:25vw;}
+}
+
+@keyframes shadow {
+  0%   {transform: rotate(0deg); left:0px; top:0px;}
+  30%  {transform: rotate(-30deg); left:11vw; top:5.5vw;}
+  70%  {transform: rotate(45deg); left:5.5vw; top:16vw;}
+  100% {transform: rotate(75deg); left:-5vw; top:25vw;}
+}

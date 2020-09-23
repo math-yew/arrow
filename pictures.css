@@ -1,0 +1,47 @@
+
+
+.some {
+  background-image: url("./images/some-art.png");
+  /* background-size: cover; */
+}
+
+
+.butterfly {
+  background-image: url("./images/butterfly.png");
+}
+
+
+.hum {
+  background-image: url("./images/hum.jpg");
+}
+
+.calm {
+  background-image: url("./images/calm.jpg");
+}
+
+.explode {
+  background-image: url("./images/explode.jpg");
+}
+
+
+.p1{
+  background-image: url("./images/hatch.png");
+}
+
+.p2 {
+  background-image: url("./images/hatch2.png");
+}
+
+
+
+.b1 {
+  background-image: url("./images/squiggle 1.png");
+}
+
+.b2 {
+  background-image: url("./images/squiggle 2.png");
+}
+
+.b3 {
+  background-image: url("./images/squiggle 3.png");
+}

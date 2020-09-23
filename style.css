@@ -1,27 +1,29 @@
-html { height: 100%; overflow:auto; }
+html {
+  height: 100%;
+  width: 100%;
+  /* margin: 0px; */
+
+  /* overflow:auto; */
+}
+
 body {
   height: 100%;
   margin: 0px;
-  background-color: rgb(0,255,0);
-}
-
-@font-face {
-  font-family: Shadows;
-  src: url('./fonts/shadowsintolight/ShadowsIntoLight.ttf');
-}
-
-@font-face {
-  font-family: Roboto;
-  src: url('./fonts/roboto/Roboto-Regular.ttf');
-}
-
-@font-face {
-  font-family: Roboto-Bold;
-  src: url('./fonts/roboto/Roboto-Bold.ttf');
+  background-color: #fff;
+  z-index: 0;
+  position: relative;
 }
 
 * {
   font-family: Roboto;
+}
+
+
+.written {
+  font-family: Shadows;
+  color: #027;
+  position: absolute;
+  font-size: 3em;
 }
 
 .pattern {
@@ -30,51 +32,93 @@ body {
   position: fixed;
   background-position: center;
   background-repeat: repeat;
-  /* background-size: cover; */
   z-index: -10;
 }
 
 .header {
   background-image: url("./images/top.jpg");
   width: 100%;
-  height: 80vh;
+  height: 120vh;
   position: relative;
   background-position: bottom;
+  background-repeat: no-repeat;
   background-size: cover;
+  /* background-size: 100% auto; */
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2em;
+  font-size: 3em;
   color: #ffffff;
 }
 
-.p1{
-  background-image: url("./images/hatch.png");
+@media only screen and (max-width: 1180px) {
+  .header {
+    height: 95vh;
+  }
 }
 
-.p2 {
-  background-image: url("./images/hatch2.png");
+@media only screen and (max-width: 950px) {
+  .header {
+    height: 60vh;
+  }
+}
+
+@media only screen and (max-width: 605px) {
+  .header {
+    height: 30vh;
+  }
 }
 
 .arrowBack{
   width: 100%;
-  height: 120vh;
+  margin: 0px;
+  position: relative;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   z-index: -20;
+  float:left;
+  /* border: purple solid thin; */
 }
 
-.b1 {
-  background-image: url("./images/squiggle 1.png");
+.arrowBack:after {
+    clear: both;
 }
 
-.b2 {
-  background-image: url("./images/squiggle 2.png");
+.category {
+  width: 50vw;
+  height: 200px;
+  background-position: center;
+  background-size: 100% auto;
+  position: absolute;
+  top:-50px;
+  left: 35vw;
+  opacity: .6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Roboto-Bold;
+  font-size: 2em;
+  color: #fff;
 }
 
-.b3 {
-  background-image: url("./images/squiggle 3.png");
+.category:hover {
+  opacity: 1;
+  transition: .5s;
+}
+
+.display {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-position: cover;
+  background-image: none;
+  top: 0px !important;
+  left: 0px;
+  z-index: 30;
+  transition: .5s;
+  overflow: hidden;
+  opacity: 1;
 }
 
 .between{
@@ -126,20 +170,6 @@ body {
   animation-iteration-count: infinite;
 }
 
-@keyframes piece {
-  0%   {transform: rotate(0deg); left:0px; top:0px;}
-  30%  {transform: rotate(-30deg);left:12vw; top:5vw;}
-  70%  {transform: rotate(45deg);left:6vw; top:15vw;}
-  100% {transform: rotate(75deg);left:-5vw; top:25vw;}
-}
-
-@keyframes shadow {
-  0%   {transform: rotate(0deg); left:0px; top:0px;}
-  30%  {transform: rotate(-30deg); left:11vw; top:5.5vw;}
-  70%  {transform: rotate(45deg); left:5.5vw; top:16vw;}
-  100% {transform: rotate(75deg); left:-5vw; top:25vw;}
-}
-
 .exp {
   margin: 10%;
   width: 80%;
@@ -168,4 +198,66 @@ body {
   -moz-transition: all 1s ease-in;
   -o-transition: all 1s ease-in;
   transition: all 1s ease-in, width .2s;
+}
+
+.pic {
+  width: 40vh;
+  height: 40vh;
+  padding: 10px;
+  margin: 10px;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.x {
+  color:#027;
+  font-family:Roboto-Bold;
+  float:right;
+  transform:translateX(-20px);
+}
+
+.x:hover {
+  opacity:.6;
+}
+
+#a-grad {
+  position: relative;
+  width: 15.4vw;
+  height: 250px;
+  background-color: #aeaeae;
+  background-image: url("./images/gradient.jpg");
+  background-size: 100% 100%;
+}
+#a-sq {
+  position: relative;
+  width: 15.4vw;
+  height: 200px;
+  background-color: #aeaeae;
+}
+
+#a-elbow, #a-right {
+  position: relative;
+  width: 23vw;
+  height: 100px;
+  background-color: #aeaeae;
+}
+
+#a-elbow {
+  border-radius: 0 0 0 300px;
+}
+
+#a-elbow:before,#a-right:before {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  /* top: 25%; */
+  left: 20vw;
+  border-width: 0 75px 100px;
+  border-style: solid;
+  border-color: transparent transparent #aeaeae;
+  transform: rotate(90deg);
+  /* transform-origin: 100% 100%; */
 }

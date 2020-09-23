@@ -30,7 +30,7 @@ $(window).on('scroll', function() {
 
   if(winScroll > 100){
     let colorValue = 255*winScroll/scrollLength;
-    $('body').css({'background-color':'rgb('+colorValue/3 + 170+',255,255)'});
+    // $('body').css({'background-color':'rgb('+colorValue/3 + 170+',255,255)'});
   }
 
   $('.pattern').css({
@@ -48,8 +48,8 @@ $(window).on('scroll', function() {
     'opacity': fade(200,500,"end",.5)
   });
 
-  expand('.e1','hidden','expanded', winScroll);
-  expand('.e2','hidden','expanded', winScroll);
+  // expand('.e1','hidden','expanded', winScroll);
+  // expand('.e2','hidden','expanded', winScroll);
 
   function expand(e, inactive, active, ws) {
     if(ws > $(e).position().top - winHeight * .8 && ws < $(e).position().top - winHeight*.2) {
@@ -70,4 +70,25 @@ $(window).on('scroll', function() {
       return op;
   }
 
+
+
+
 });
+
+function category(cat){
+  let e = $("#"+cat);
+  let arr = e.attr("class").split(/\s+/);
+  if(arr.indexOf("category") > -1){
+    if(arr.indexOf("display") > -1){
+      e.empty();
+      console.log("cat: " + cat.toUpperCase());
+      e.text(cat.toUpperCase());
+      e.removeClass("display");
+    } else {
+      e.empty();
+      e.addClass("display");
+      $("#templates #gallery").clone().appendTo("#"+cat);
+      $("#templates #pic").clone().addClass("hum").appendTo("#"+cat+" #pics");
+    }
+  }
+}
