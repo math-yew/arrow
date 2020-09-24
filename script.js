@@ -79,16 +79,23 @@ function category(cat){
   let e = $("#"+cat);
   let arr = e.attr("class").split(/\s+/);
   if(arr.indexOf("category") > -1){
+  console.log("cat: " + cat.toUpperCase());
     if(arr.indexOf("display") > -1){
       e.empty();
-      console.log("cat: " + cat.toUpperCase());
       e.text(cat.toUpperCase());
       e.removeClass("display");
     } else {
       e.empty();
       e.addClass("display");
       $("#templates #gallery").clone().appendTo("#"+cat);
-      $("#templates #pic").clone().addClass("hum").appendTo("#"+cat+" #pics");
+      let picsArr;
+      if(cat == "religious") picsArr = ["calm","bountiful"];
+      if(cat == "nature") picsArr = ["butterfly","hum","frog"];
+      if(cat == "abstract") picsArr = ["blob","brynbow","explode", "ugly"];
+      for (var i = 0; i < picsArr.length; i++) {
+        let className = picsArr[i];
+        $("#templates #pic").clone().addClass(className).appendTo("#"+cat+" #pics");
+      }
     }
   }
 }

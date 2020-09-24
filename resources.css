@@ -14,6 +14,17 @@
   src: url('./fonts/roboto/Roboto-Bold.ttf');
 }
 
+.bold {
+  font-family: Roboto-Bold;
+}
+
+.shadow-text {
+  font-family: Shadows;
+}
+
+.center {
+  text-align: center;
+}
 @keyframes piece {
   0%   {transform: rotate(0deg); left:0px; top:0px;}
   30%  {transform: rotate(-30deg);left:12vw; top:5vw;}

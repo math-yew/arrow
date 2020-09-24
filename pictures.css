@@ -2,26 +2,52 @@
 
 .some {
   background-image: url("./images/some-art.png");
-  /* background-size: cover; */
+}
+
+/* RELIGIOUS */
+.calm {
+  background-image: url("./images/calm.jpg");\
+}
+
+.bountiful {
+  background-image: url("./images/bountiful.png");\
 }
 
 
+/* NATURE */
 .butterfly {
   background-image: url("./images/butterfly.png");
 }
-
 
 .hum {
   background-image: url("./images/hum.jpg");
 }
 
-.calm {
-  background-image: url("./images/calm.jpg");
+.frog {
+  background-image: url("./images/frog.jpg");\
 }
 
+
+/* ABSTRACT */
 .explode {
   background-image: url("./images/explode.jpg");
 }
+
+.blob {
+  background-image: url("./images/blob.jpg");\
+}
+
+.brynbow {
+  background-image: url("./images/brynbow.png");\
+}
+
+.ugly {
+  background-image: url("./images/ugly.png");\
+}
+
+
+
+
 
 
 .p1{
