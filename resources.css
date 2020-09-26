@@ -14,6 +14,10 @@
   src: url('./fonts/roboto/Roboto-Bold.ttf');
 }
 
+.pink {
+  border: pink solid thin;
+}
+
 .bold {
   font-family: Roboto-Bold;
 }

@@ -4,13 +4,33 @@
   background-image: url("./images/some-art.png");
 }
 
+
 /* RELIGIOUS */
+.carry {
+  background-image: url("./images/carry.jpg");
+}
 .calm {
-  background-image: url("./images/calm.jpg");\
+  background-image: url("./images/calm.jpg");
 }
 
 .bountiful {
-  background-image: url("./images/bountiful.png");\
+  background-image: url("./images/bountiful.png");
+}
+
+.portrait {
+  background-image: url("./images/portrait.jpg");
+}
+
+.veil {
+  background-image: url("./images/veil.png");
+}
+
+.smile {
+  background-image: url("./images/smile.png");
+}
+
+.baby {
+  background-image: url("./images/baby.jpg");
 }
 
 
@@ -24,9 +44,20 @@
 }
 
 .frog {
-  background-image: url("./images/frog.jpg");\
+  background-image: url("./images/frog.jpg");
 }
 
+.turtle {
+  background-image: url("./images/turtle.jpg");
+}
+
+.sun {
+  background-image: url("./images/sun.jpg");
+}
+
+.lamb {
+  background-image: url("./images/lamb.png");
+}
 
 /* ABSTRACT */
 .explode {
@@ -34,20 +65,32 @@
 }
 
 .blob {
-  background-image: url("./images/blob.jpg");\
+  background-image: url("./images/blob.jpg");
 }
 
 .brynbow {
-  background-image: url("./images/brynbow.png");\
+  background-image: url("./images/brynbow.png");
 }
 
 .ugly {
-  background-image: url("./images/ugly.png");\
+  background-image: url("./images/ugly.png");
 }
 
+.foot {
+  background-image: url("./images/foot.jpg");
+}
 
+.loss {
+  background-image: url("./images/loss.jpg");
+}
 
+.scrapers {
+  background-image: url("./images/scrapers.jpg");
+}
 
+.grandpa {
+  background-image: url("./images/grandpa.jpg");
+}
 
 
 .p1{

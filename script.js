@@ -89,9 +89,9 @@ function category(cat){
       e.addClass("display");
       $("#templates #gallery").clone().appendTo("#"+cat);
       let picsArr;
-      if(cat == "religious") picsArr = ["calm","bountiful"];
-      if(cat == "nature") picsArr = ["butterfly","hum","frog"];
-      if(cat == "abstract") picsArr = ["blob","brynbow","explode", "ugly"];
+      if(cat == "religious") picsArr = ["calm","bountiful","carry","veil","baby","portrait","smile"];
+      if(cat == "nature") picsArr = ["butterfly","hum","frog","sun","lamb","turtle"];
+      if(cat == "abstract") picsArr = ["blob","brynbow","explode","loss","ugly","foot","scrapers","grandpa"];
       for (var i = 0; i < picsArr.length; i++) {
         let className = picsArr[i];
         $("#templates #pic").clone().addClass(className).appendTo("#"+cat+" #pics");
