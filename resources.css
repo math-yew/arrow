@@ -18,6 +18,10 @@
   border: pink solid thin;
 }
 
+.purple {
+  border: purple solid thin;
+}
+
 .bold {
   font-family: Roboto-Bold;
 }

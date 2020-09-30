@@ -14,7 +14,7 @@
 }
 
 .bountiful {
-  background-image: url("./images/bountiful.png");
+  background-image: url("./images/bountiful.jpg");
 }
 
 .portrait {
@@ -22,11 +22,11 @@
 }
 
 .veil {
-  background-image: url("./images/veil.png");
+  background-image: url("./images/veil.jpg");
 }
 
 .smile {
-  background-image: url("./images/smile.png");
+  background-image: url("./images/smile.jpg");
 }
 
 .baby {
@@ -36,7 +36,7 @@
 
 /* NATURE */
 .butterfly {
-  background-image: url("./images/butterfly.png");
+  background-image: url("./images/butterfly.jpg");
 }
 
 .hum {
@@ -56,7 +56,7 @@
 }
 
 .lamb {
-  background-image: url("./images/lamb.png");
+  background-image: url("./images/lamb.jpg");
 }
 
 /* ABSTRACT */
@@ -73,7 +73,7 @@
 }
 
 .ugly {
-  background-image: url("./images/ugly.png");
+  background-image: url("./images/ugly.jpg");
 }
 
 .foot {
@@ -94,23 +94,23 @@
 
 
 .p1{
-  background-image: url("./images/hatch.png");
+  background-image: url("./images/hatch.jpg");
 }
 
 .p2 {
-  background-image: url("./images/hatch2.png");
+  background-image: url("./images/hatch2.jpg");
 }
 
 
 
 .b1 {
-  background-image: url("./images/squiggle 1.png");
+  background-image: url("./images/squiggle 1.jpg");
 }
 
 .b2 {
-  background-image: url("./images/squiggle 2.png");
+  background-image: url("./images/squiggle 2.jpg");
 }
 
 .b3 {
-  background-image: url("./images/squiggle 3.png");
+  background-image: url("./images/squiggle 3.jpg");
 }

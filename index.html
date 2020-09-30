@@ -18,55 +18,71 @@
     <!-- ---------------------------------------- PICTURES ---------------------------------------------- -->
     <div class="arrowBack">
       <h1 class="written" style="position:absolute;top:40px;left:57vw;">SOME OF MY ART:</h1>
-      <div style="position:relative;left:11.58vw;margin-bottom:100px;">
+      <div class="fat" style="position:relative;left:11.58vw;margin-bottom:100px;">
         <div class="a-grad"></div>
         <div class="a-right">
-          <div class="category calm" onclick="category(this.id)" style="" id="religious">RELIGIOUS</div>
+          <div class="category calm" onclick="category(this.id,event.target.className)" style="" id="religious">RELIGIOUS</div>
         </div>
         <div class="a-sq"></div>
         <div class="a-right">
-          <div class="category hum" onclick="category(this.id)" style="" id="nature">NATURE</div>
+          <div class="category hum" onclick="category(this.id,event.target.className)" style="" id="nature">NATURE</div>
         </div>
         <div class="a-sq"></div>
         <div class="a-elbow">
-          <div class="category explode" onclick="category(this.id)" style="color:#000" id="abstract">ABSTRACT</div>
+          <div class="category explode" onclick="category(this.id,event.target.className)" style="color:#000" id="abstract">ABSTRACT</div>
         </div>
       </div>
     </div>
 
-    <!-- ---------------------------------------- REASONS ---------------------------------------------- -->
+    <!-- ---------------------------------------- INFO ---------------------------------------------- -->
     <div class="arrowBack">
-      <div style="position:relative;left:40vw;margin-bottom:100px;">
+      <div class="skinny" style="position:relative;left:45vw;">
         <div class="a-sq" style="background-image: linear-gradient(180deg, rgba(174,174,174,0), rgba(174,174,174,1));background-color:#fff;"></div>
         <div>
-          <h1 class="bold center" style="transform:translateX(-40vw)">WHY DO I MAKE ART?</h1>
+          <h1 class="bold center" style="transform:translateX(-40vw)">ABOUT MY ART:</h1>
         </div>
         <div class="a-sq" style="height:100px;"></div>
         <div class="a-left">
           <div  style="left:-33vw;width:28vw;position:absolute;">
-            <h1 class="written center" style="font-size:2.5em;margin:0px;">#1: BECAUSE I WANT TO</h1>
-            <p style="font-size:1.5em;padding:0px 50px;">I want to, so I do.</p>
+            <h1 class="written center" style="font-size:2.5em;margin:0px;">HOW</h1>
+            <p style="font-size:1.5em;padding:0px 50px;">A large portion of my art is 100% digitally made. There is still a bunch of my art that has started as an acrylic painting or pencil drawing but then finalized with editing on the computer.</p>
           </div>
         </div>
         <div class="a-right">
-          <div  style="left:27vw;width:28vw;position:absolute;">
-            <h1 class="written center" style="font-size:2.5em;margin:0px;">#1: BECAUSE I WANT TO</h1>
-            <p style="font-size:1.5em;padding:0px 50px;">I want to, so I do.</p>
+          <div class="info" style="left:27vw;width:28vw;position:absolute;">
+            <h1 class="written center">WHY</h1>
+            <p>I make art because ... I want to. Enough said right? A lot of my art is based on my Christian beliefs. I believe that Christ is the solution to any of our pain. So if I can point someone towards Him through my art, and help them access His healing, I can't think of anything more satisfying.</p>
           </div>
         </div>
         <div class="a-sq"></div>
         <div class="a-left">
           <div  style="left:-33vw;width:28vw;position:absolute;">
-            <h1 class="written center" style="font-size:2.5em;margin:0px;">#1: BECAUSE I WANT TO</h1>
-            <p style="font-size:1.5em;padding:0px 50px;">I want to, so I do.</p>
+            <h1 class="written center">WHEN</h1>
+            <p>Now</p>
           </div>
         </div>
         <div class="a-sq"></div>
-        <div class="a-diag" style=""></div>
-        <div class="a-str"></div>
+        <div class="a-diag" style="">
+          <div class="a-str"></div>
+        </div>
       </div>
     </div>
 
+    <div class="arrowBack">
+      <div class="half">
+        <div  class="info">
+          <h1 class="written center">INSTAGRAM</h1>
+          <p>You'll find pretty much everything I make on my Instagram account.  Follow me on Instagram to see my latest projects.</p>
+          <p>If you find anything there that you really like but can't find on my Etsy store, tell me, and I'll get it added for you.</p>
+        </div>
+      </div>
+      <div class="half">
+        <div class="info">
+          <h1 class="written center">HOW</h1>
+          <p>A large portion of my art is 100% digitally made. There is still a bunch of my art that has started as an acrylic painting or pencil drawing but then finalized with editing on the computer.</p>
+        </div>
+      </div>
+    </div>
 
 
     <!-- <div class="pattern p1">
@@ -82,7 +98,7 @@
     </div>
 
     <div class="between" style="">
-      <div class="circle" style="left:40%;top:-40vh;background-color:green;">  </div>
+      <!-- <div class="circle" style="left:40%;top:-40vh;background-color:green;">  </div> -->
     </div>
 
     <div class="arrowBack b3">
@@ -96,14 +112,17 @@
     </div>
 
     <div style="display:none" id="templates">
-      <div id="gallery" style="width:100%; height:100%;position:relative;">
+      <div id="gallery" style="width:100%; height:100%;position:relative;padding-bottom:20px;">
         <div style="background-color:#ffffff; width:100%; height:100%;position:absolute;opacity:.8;"></div>
         <div style="width:100%;">
           <div class="x">X</div>
         </div>
-        <div  style="width:100%;height:100%;position:relative;display:flex;flex-wrap:wrap;justify-content:space-around;overflow:scroll;" id="pics"></div>
+        <div style="width:100%;height:100%;position:relative;display:flex;flex-wrap:wrap;justify-content:space-around;overflow:scroll;" id="pics"></div>
       </div>
-      <div class="pic" id="pic"></div>
+      <!-- <div style="background-color:#ffffff;padding:10px;" id="pic">
+        <div class="pic"></div>
+      </div> -->
+      <div class="pic trans" id="pic" onclick="enlarge(this.id)"></div>
     </div>
 
 
