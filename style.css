@@ -56,24 +56,6 @@ body {
   color: #ffffff;
 }
 
-@media only screen and (max-width: 1180px) {
-  .header {
-    height: 95vh;
-  }
-}
-
-@media only screen and (max-width: 950px) {
-  .header {
-    height: 60vh;
-  }
-}
-
-@media only screen and (max-width: 605px) {
-  .header {
-    height: 30vh;
-  }
-}
-
 .arrowBack{
   /* width: 100%;  */
   margin: 0px;
@@ -332,6 +314,14 @@ body {
   transform: translate(-9vw, 24vw) rotate(180deg);
 }
 
+.rotate{
+  background-color: #ccc;
+}
+
+.rotate:before{
+  border-color: transparent transparent #ccc;
+}
+
 .white, .white2 {
   width:11.58vw;
   height:200px;
@@ -370,4 +360,98 @@ body {
   margin:0;
   z-index:40;
   border: #fff solid 20px;
+}
+
+.instagram, .etsy {
+  color: #fff;
+  padding:20px;
+  margin: 0px 15%;
+  overflow: hidden;
+  position: relative;
+}
+
+.instagram {
+  background-image: linear-gradient(45deg, #fdd923, #f10102, #b500af);
+}
+
+.etsy {
+  background-image: linear-gradient(45deg, #ffb894, #f06620, #f06620);
+}
+
+.info p {
+  z-index: 2;
+  position: relative;
+}
+
+.instaLogo, .etsyLogo {
+  width: 80vh;
+  height: 80vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  z-index: 1;
+  opacity: .2;
+  animation-name: drift;
+
+  animation-duration: 10s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+.etsyLogo{
+  /* background-size: contain; */
+  opacity: .5;
+  animation-direction: alternate-reverse;
+  animation-delay: 1.5s;
+  animation-duration: 11s;
+}
+
+button{
+  padding:20px;
+  background-color: rgba(174,174,174,.5);
+  color: #fff;
+  font-size: 1.25em;
+  border: #fff solid thick;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+button:hover{
+  transition;.5s;
+  background-color: rgba(200,200,200,.7);
+}
+
+button:active {
+  border: #ccc solid thick;
+}
+
+/* /////////////////////////////// MEDIA QUERIES ///////////////////////////////////// */
+
+@media only screen and (max-width: 1180px) {
+  .header {
+    height: 95vh;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .header {
+    height: 60vh;
+  }
+
+  .half {
+    width: 100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    font-size: 1.25em;
+  }
+}
+
+@media only screen and (max-width: 605px) {
+  .header {
+    height: 30vh;
+  }
 }

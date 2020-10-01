@@ -4,6 +4,14 @@
   background-image: url("./images/some-art.png");
 }
 
+.instaLogo {
+  background-image: url("./images/instaLogo.png");
+}
+
+.etsyLogo {
+  background-image: url("./images/etsyLogo.png");
+}
+
 
 /* RELIGIOUS */
 .carry {

@@ -46,3 +46,11 @@
   70%  {transform: rotate(45deg); left:5.5vw; top:16vw;}
   100% {transform: rotate(75deg); left:-5vw; top:25vw;}
 }
+
+@keyframes drift {
+  0%   {transform: translate(30%,0%)}
+  25%  {transform: translate(20%,10%)}
+  50%  {transform: translate(5%,0%)}
+  75%  {transform: translate(-30%,-15%)}
+  100% {transform: translate(-45%,-5%)}
+}

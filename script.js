@@ -7,7 +7,7 @@ let docHeight = document.documentElement.scrollHeight;
 let previous = 0;
 let winWidth;
 let winHeight;
-console.log(document.documentElement.scrollTop);
+// console.log(document.documentElement.scrollTop);
 setTimeout(function () {
   winWidth = $(window).width();
   winHeight = $(window).height();
@@ -22,12 +22,15 @@ $(window).on('scroll', function() {
   let winHeight = $(this).innerHeight();
   let scrollLength = docHeight-winHeight;
 
-  let shifting = -Math.cos(winScroll/50);
+  let shifting = -Math.cos(winScroll/40);
   let z = (previous > shifting) ? 1 : -1;
   previous = shifting;
 
-  $('.circle').css({
-    'transform': 'translate(' + -150 *shifting + '%,' + 200 * shifting + '%) scale('+(1+.5*(1-Math.abs(shifting))*z)+')',
+let degree = (shifting*90*z);
+console.log("degree: " + degree);
+
+  $('.rotate').css({
+    'transform': 'translate(' + -100 *shifting + '%,' + 100 * shifting + '%) scale('+(.5+.25*(1-Math.abs(shifting))*z)+') rotate(-45deg) rotateY('+degree+'deg)',
     'z-index': z*10
   });
 
@@ -40,7 +43,7 @@ $(window).on('scroll', function() {
     'top': -winScroll/20+'px'
   });
 
-  console.log("SCROLL: "+winScroll);
+  // console.log("SCROLL: "+winScroll);
   // console.log($('.expand').position().top);
 
   $('.p1').css({
