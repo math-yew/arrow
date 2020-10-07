@@ -54,3 +54,10 @@
   75%  {transform: translate(-30%,-15%)}
   100% {transform: translate(-45%,-5%)}
 }
+
+@keyframes falling {
+  0%   { top:0px;}
+  50% { transform: top:150vh;}
+  90% { transform: rotate(0deg);top:450vh;}
+  100% { transform: rotate(0deg);top:500vh;opacity:0}
+}

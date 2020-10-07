@@ -26,11 +26,11 @@ $(window).on('scroll', function() {
   let z = (previous > shifting) ? 1 : -1;
   previous = shifting;
 
-let degree = (shifting*90*z);
-console.log("degree: " + degree);
+  let degree = 90*(shifting + 1 - (1-z)*4/2)*z+90;
+  // console.log("degree: " + degree);
 
   $('.rotate').css({
-    'transform': 'translate(' + -100 *shifting + '%,' + 100 * shifting + '%) scale('+(.5+.25*(1-Math.abs(shifting))*z)+') rotate(-45deg) rotateY('+degree+'deg)',
+    'transform': 'translate(' + -100 *shifting + '%,' + 100  * shifting + '%) scale('+(.5+.25*(1-Math.abs(shifting))*z)+') rotate(-45deg) rotateY('+degree+'deg)',
     'z-index': z*10
   });
 
@@ -57,8 +57,17 @@ console.log("degree: " + degree);
   // expand('.e1','hidden','expanded', winScroll);
   // expand('.e2','hidden','expanded', winScroll);
 
-  function expand(e, inactive, active, ws) {
-    if(ws > $(e).position().top - winHeight * .8 && ws < $(e).position().top - winHeight*.2) {
+  expand('.pen','dummy','falling', winScroll, ".shortened");
+
+  function expand(e, inactive, active, ws, other) {
+    // console.log("yo" + winHeight);
+    let pos = $(e).position().top;
+    // console.log("HEY: " + pos*1+666 );
+    // console.log($(e).position().top - winHeight * .8 + " < " + ws + " < " + $(e).position().top - winHeight*.2);
+    e = (!other) ? e : other;
+    let upper = ws < pos - winHeight*.2;
+    upper = (!other) ? upper : true;
+    if(ws > pos - winHeight * .8 && upper) {
       $(e).addClass(active);
       $(e).removeClass(inactive);
     } else {

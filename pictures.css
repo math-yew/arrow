@@ -12,6 +12,9 @@
   background-image: url("./images/etsyLogo.png");
 }
 
+.bottom {
+  background-image: url("./images/bottom2.png"), url("./images/bottom.png");
+}
 
 /* RELIGIOUS */
 .carry {

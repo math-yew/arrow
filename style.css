@@ -25,7 +25,7 @@ body {
 
 .written {
   font-family: Shadows;
-  color: #027;
+  color: #345ec7;
   font-size: 3em;
 }
 
@@ -64,7 +64,12 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   z-index: 1;
-  overflow:hidden;
+  overflow: hidden;
+}
+
+.bottom {
+  background-position: bottom;
+  background-size: contain;
 }
 
 .category {
@@ -212,10 +217,12 @@ body {
 }
 
 .x {
-  color:#027;
+  color:#345ec7;
   font-family:Roboto-Bold;
   float:right;
   transform:translateX(-20px);
+  cursor: pointer;
+  margin:10px;
 }
 
 .x:hover {
@@ -314,12 +321,22 @@ body {
   transform: translate(-9vw, 24vw) rotate(180deg);
 }
 
+.shortened {
+  height:15vw;
+  transition: .5s;
+  position: relative;
+}
+
+.shortened:before {
+  transform: translate(-9vw, 14vw) rotate(180deg);
+}
+
 .rotate{
-  background-color: #ccc;
+  background-color: #345ec7;
 }
 
 .rotate:before{
-  border-color: transparent transparent #ccc;
+  border-color: transparent transparent #345ec7;
 }
 
 .white, .white2 {
@@ -394,7 +411,7 @@ body {
   opacity: .2;
   animation-name: drift;
 
-  animation-duration: 10s;
+  animation-duration: 20s;
   animation-fill-mode: both;
   animation-timing-function: ease-in-out;
   animation-direction: alternate;
@@ -406,7 +423,7 @@ body {
   opacity: .5;
   animation-direction: alternate-reverse;
   animation-delay: 1.5s;
-  animation-duration: 11s;
+  animation-duration: 22s;
 }
 
 button{
@@ -428,6 +445,25 @@ button:active {
   border: #ccc solid thick;
 }
 
+.shift {
+  transform:translateY(35vh);
+}
+
+.arrowBack {
+  padding-bottom: 10vh;
+}
+
+.falling {
+  animation: falling;
+  animation-duration: 4s;
+  animation-delay: 1s;
+  /* animation-fill-mode: both; */
+  animation-timing-function: ease-in;
+  /* animation-direction: alternate; */
+  /* animation-iteration-count: infinite; */
+  /* overflow: hidden; */
+}
+
 /* /////////////////////////////// MEDIA QUERIES ///////////////////////////////////// */
 
 @media only screen and (max-width: 1180px) {
@@ -446,6 +482,41 @@ button:active {
     display:flex;
     flex-direction:column;
     justify-content:center;
+    font-size: 1.25em;
+  }
+
+  .shift {
+    transform:translateY(0vh);
+  }
+
+
+  .short1{
+    left: 60vw !important;
+  }
+
+
+  .short2{
+    left: 40vw !important;
+  }
+
+  .short3{
+    left: 60vw !important;
+  }
+
+  .short4{
+    left: 40vw !important;
+  }
+
+  .short5{
+    left: 60vw !important;
+  }
+
+  .short6{
+    left: 40vw !important;
+  }
+
+
+  body {
     font-size: 1.25em;
   }
 }
