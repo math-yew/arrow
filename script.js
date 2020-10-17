@@ -164,3 +164,17 @@ function enlarge(pic){
   }
   $("#tempImg").css({'width':width,'height':height})
 }
+
+function modal(id, open){
+  if(!!open){
+    $('#' + id).css({'display':'flex'});
+  } else{
+    $('#' + id).css({'display':'none'});
+  }
+}
+
+$(document).keydown(function(event) {
+  if (event.keyCode == 27) {
+    $('.outer-modal').hide();
+  }
+});

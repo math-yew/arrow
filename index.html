@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./resources.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./pictures.css">
+    <!-- <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css"> -->
   </head>
   <body>
     <div class="header">
@@ -15,10 +16,11 @@
       <h1>Matthew Mecham</h1>
     </div>
 
-    <!-- ---------------------------------------- PICTURES ---------------------------------------------- -->
+<!-- ////////////////////////////////////////////  ME ///////////////////////////////////////////////// -->
+
     <div class="arrowBack">
       <h1 class="written" style="position:absolute;top:40px;left:57vw;">SOME OF MY ART:</h1>
-      <div class="fat" style="position:relative;left:11.58vw;margin-bottom:100px;">
+      <div class="skinny" style="position:relative;left:10vw;margin-bottom:100px;">
         <div class="a-grad"></div>
         <div class="a-right">
           <div class="category calm" onclick="category(this.id,event.target.className)" style="" id="religious">RELIGIOUS</div>
@@ -34,45 +36,45 @@
       </div>
     </div>
 
-    <!-- ---------------------------------------- INFO ---------------------------------------------- -->
+<!-- //////////////////////////////////////////// QUESTIONS ///////////////////////////////////////////////// -->
+
     <div class="arrowBack">
       <div class="skinny" style="position:relative;left:45vw;">
         <div class="a-sq" style="background-image: linear-gradient(180deg, rgba(174,174,174,0), rgba(174,174,174,1));background-color:#fff;"></div>
-        <div>
-          <h1 class="bold center" style="transform:translateX(-45vw)">ABOUT MY ART:</h1>
-        </div>
-        <div class="a-sq" style="height:100px;"></div>
         <div class="a-left">
-          <div  style="left:-33vw;width:28vw;position:absolute;">
-            <h1 class="written center" style="font-size:2.5em;margin:0px;">HOW</h1>
+          <div class="info q"  style="left:-33vw;width:28vw;position:absolute;">
+            <h1 class="written center wide" onclick="modal('how',true)">HOW</h1>
             <p style="font-size:1.5em;padding:0px 50px;">A large portion of my art is 100% digitally made. There is still a bunch of my art that has started as an acrylic painting or pencil drawing but then finalized with editing on the computer.</p>
           </div>
         </div>
         <div class="a-right">
-          <div class="info" style="left:27vw;width:28vw;position:absolute;">
-            <h1 class="written center">WHY</h1>
+          <div class="info q" style="left:23vw;width:28vw;position:absolute;">
+            <h1 class="written center wide" onclick="modal('why',true)">WHY</h1>
             <p>I make art because ... I want to. Enough said right? A lot of my art is based on my Christian beliefs. I believe that Christ is the solution to any of our pain. So if I can point someone towards Him through my art, and help them access His healing, I can't think of anything more satisfying.</p>
           </div>
         </div>
         <div class="a-sq"></div>
         <div class="a-left">
-          <div class="info" style="left:-33vw;width:28vw;position:absolute;">
-            <h1 class="written center">WHEN</h1>
-            <p>Now</p>
+          <div class="info q" style="left:-33vw;width:28vw;position:absolute;">
+            <h1 class="written center wide" onclick="modal('when',true)">WHEN</h1>
+            <p>Ever since I was a little kid I've always... oh wait, that's everyone else's story, not mine. For me, art has been a more recent passion. I strive to perfect my style. Despite how my portfolio has developed over time, expect that the best is yet to come.</p>
           </div>
         </div>
         <div class="a-sq">
-          <div class="a-left rotate"></div>
+          <div class="a-left rotate" onclick="modal('wallpaper',true)" style="cursor:pointer;"></div>
         </div>
         <div class="a-diag" style="">
           <div class="a-str"></div>
         </div>
       </div>
+      <h1 class="written center"  style="position: absolute;bottom:5vh;left:50%;transform: translateY(-1vw)">WHERE</h1>
     </div>
+
+<!-- ////////////////////////////////////////////  WHERE ///////////////////////////////////////////////// -->
 
     <div class="arrowBack">
       <div class="half" style="transform: translateY(-0vw)">
-        <h1 class="written center"  style="transform: translateY(-0vw)">INSTAGRAM</h1>
+        <h1 class="written center"  style="transform: translateY(-0vw)">Instagram</h1>
         <div  class="info instagram">
           <div class="instaLogo"></div>
           <p>You'll find pretty much everything I make on my Instagram account.  Follow me on Instagram to see my latest projects.</p>
@@ -82,7 +84,7 @@
         </div>
       </div>
       <div class="half">
-        <h1 class="written center">ETSY</h1>
+        <h1 class="written center">Etsy</h1>
         <div  class="info etsy">
           <div class="etsyLogo"></div>
           <p>You can purchase my art on Etsy.  My shop name is named LookUpward. I encourage you to click the 'Favorite Shop' once you visit so that you will be able to find my shop easier in the future.</p>
@@ -93,13 +95,8 @@
       </div>
     </div>
 
-    <!-- <div class="arrowBack" style="overflow:visible;">
-      <div class="skinnyy">
-        <div class="a-str" style="position:relative;left:70vw;">
-          <div class="a-sq" style="position:absolute; top:-10vw;"><div class="a-sq" style="position:absolute; bottom:10vw;"></div></div>
-        </div>
-      </div>
-    </div> -->
+<!-- ////////////////////////////////////////////  ME ///////////////////////////////////////////////// -->
+
     <div class="me">
       <div class="arrowBack" style="overflow:visible;">
         <div style="width:100%;height:5vh;float:left;"></div>
@@ -114,7 +111,7 @@
           <div class="a-str shortened short2" style="transform:rotate(-30deg);top:-8vw;left:10vw;"></div>
           <h1 class="written center">. . . I am an artist.</h1>
           <div  class="info">
-            <p>Yep. Ever since I was a little kid I've always... oh wait, that's everyone else's story, not mine.  For me, art has been a more recent passion.  I highly recommend it.</p>
+            <p class="center">Yep. I highly recommend it.</p>
           </div>
         </div>
       </div>
@@ -125,14 +122,14 @@
           <div class="a-str shortened short3" style="transform:rotate(25deg);top:-5vw;left:30vw;"></div>
           <h1 class="written center">. . . I am a web developer</h1>
           <div  class="info">
-            <p>I love to code.  It is a form of creativity and art.  For example, I made this website.</p>
+            <p class="center">I love to code.  It is a form of creativity and art.  For example, I made this website.</p>
           </div>
         </div>
         <div class="half shift" style="padding-top:10vh;">
           <div class="a-str shortened short4" style="transform:rotate(-45deg);top:-8vw;left:10vw;"></div>
           <h1 class="written center">. . . I am a family man.</h1>
           <div  class="info">
-            <p>I married my best friend. We adopted two awesome kids.  I am blessed!</p>
+            <p class="center">I married my best friend. We adopted two awesome kids.  I am blessed!</p>
           </div>
         </div>
       </div>
@@ -143,14 +140,14 @@
           <div class="a-str shortened short5" style="transform:rotate(40deg);top:-3vw;left:30vw;"></div>
           <h1 class="written center">. . . I am a Christian</h1>
           <div  class="info">
-            <p>I am a member of <a href="https://www.comeuntochrist.org/" target="_blank" rel="noopener noreferrer" style="color:#345ec7;">The Church of Jesus Christ of Latter Day Saint</a>.</p>
+            <p class="center">I am a member of <a href="https://www.comeuntochrist.org/" target="_blank" rel="noopener noreferrer" style="color:#345ec7;">The Church of Jesus Christ of Latter Day Saint</a>.</p>
           </div>
         </div>
         <div class="half shift" style="padding-top:10vh;">
           <div class="a-str shortened short6" style="transform:rotate(-30deg);top:-8vw;left:10vw;"></div>
           <h1 class="written center">. . . I am a lot of things</h1>
           <div  class="info">
-            <p>I'm a guitarist. I'm a music fan.  I'm a snowboarder.  I'm an adoptive father.</p>
+            <p class="center">I'm a guitarist. I'm a pisces. I'm a music fan. I'm a snowboarder. I'm an introvert. I'm an adoptive father. I'm a conservative.</p>
           </div>
         </div>
       </div>
@@ -158,42 +155,104 @@
     <div class="arrowBack" style="width:100%;height:50vh;">
       <!-- <div style="width:100%;height:200vh;background-color:blue;position: absolute;top:100vh;"></div> -->
     </div>
-    <div class="arrowBack bottom pen" style="width:70vw;height:110vh;padding:0 15vw;">
-      <h1 class="written center"  style="transform: translateY(-0vw)">LET'S TALK</h1>
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeY1vYebiDQKereC63MSX1AtR7b2Yre-VJD16AIojm3SUnvuA/viewform?embedded=true" width="640" height="641" scrolling="no" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    </div>
 
-    <!--
-    <div class="pattern p1">
-      <div class="e1 exp trans">Hey</div>
-    </div>
-    <div class="pattern p2"></div>
+<!-- ////////////////////////////////////////////  ME ///////////////////////////////////////////////// -->
 
-    <div class="arrowBack b1"></div>
-    <div class="between" style="">
-    </div>
-
-    <div class="arrowBack b2"></div>
-    </div>
-
-    <div class="between" style="">
-    </div>
-
-
-    <div class="arrowBack b3">
-      <div style="left: 53%; position:absolute;transform: translateX(-50%)">
-        <div class="piece a1"></div>
-        <div class="shadow a1"></div>
+      <div class="arrowBack bottom pen" style="width:70vw;height:110vh;padding:0 15vw;">
+        <h1 class="written center"  style="transform: translateY(-0vw)">LET'S TALK</h1>
+        <div style="position:relative;width:100%;">
+          <button class="button" style="position:absolute;left:50%;transform: translateX(-50%)" type="button" onclick="modal('message',true)" name="button">Message Me</button>
+        </div>
       </div>
-      <div class="e2 exp trans">
-        hi
+
+
+
+
+  <!-- ////////////////////////////// MESSAGE MODAL //////////////////////////////////////////////////////// -->
+      <div class="outer-modal" id="message">
+        <div style="width:85vw;">
+          <p class="x" onclick="modal('message')" style="transform:translateX(0%);font-size:1.5em;">X</p>
+        </div>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeY1vYebiDQKereC63MSX1AtR7b2Yre-VJD16AIojm3SUnvuA/viewform?embedded=true" width="100%" height="673" frameborder="0" marginheight="0" marginwidth="0" style="transform:scale(1);">Loading…</iframe>
       </div>
+
+  <!-- ////////////////////////////// WALLPAPER MODAL //////////////////////////////////////////////////////// -->
+      <div class="outer-modal" id="wallpaper" style="font-size:1.5em;overflow:auto">
+        <div class="modal-width" style="">
+          <p class="x" onclick="modal('wallpaper')" style="transform:translateX(100%);font-size:1.75em;color:#ffffff;">X</p>
+        </div>
+        <div class="modal-width" style="background-color:rgba(255,255,255,1);">
+          <div class="half signup" style="">
+          <div class=" " style="padding:20px;box-sizing: border-box;width:100%;height:100%;background-color:rgba(255,255,255,.8);">
+            <h1>Newsletter + Free Wallpaper</h1>
+            <p>For signing up for my newsletter, I’d like to give you a cellphone wallpaper of my most popular painting. For free in fact! I’ll get it emailed to you right away.</p>
+
+            <div id="mc_embed_signup">
+              <form action="https://matthewmecham.us2.list-manage.com/subscribe/post?u=da725fd9698a4797134a3239d&amp;id=5283654cc0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+                <div class="mc-field-group">
+                	<label for="mce-EMAIL">Email Address </label>
+                	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL"  style="padding:10px;border:solid 2px #aaa;margin-bottom:20px;width:95%">
+                </div>
+              	<div id="mce-responses" class="clear">
+              		<div class="response" id="mce-error-response" style="display:none"></div>
+              		<div class="response" id="mce-success-response" style="display:none"></div>
+              	</div>
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_da725fd9698a4797134a3239d_5283654cc0" tabindex="-1" value=""></div>
+                <div class="clear center">
+                  <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" style="font-size:.8em"></div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      <div class="half phone" style="height:100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;"></div>
     </div>
- -->
+  </div>
+
+  <!-- ////////////////////////////// HOW MODAL //////////////////////////////////////////////////////// -->
+      <div class="outer-modal" onclick="modal('how')" id="how">
+        <div class="white-box">
+          <p class="x" style="position:absolute;right:12.5vw;">X</p>
+          <h1 class="written center wide">HOW</h1>
+          <p style="padding:0px 50px;">A large portion of my art is 100% digitally made. There is still a bunch of my art that has started as an acrylic painting or pencil drawing but then finalized with editing on the computer.</p>
+        </div>
+      </div>
+
+  <!-- ////////////////////////////// WHY MODAL //////////////////////////////////////////////////////// -->
+      <div class="outer-modal" onclick="modal('why')" id="why">
+        <div class="white-box">
+          <p class="x" style="position:absolute;right:12.5vw;">X</p>
+          <h1 class="written center wide">WHY</h1>
+          <p style="padding:0px 50px;">I make art because ... I want to. Enough said right? A lot of my art is based on my Christian beliefs. I believe that Christ is the solution to any of our pain. So if I can point someone towards Him through my art, and help them access His healing, I can't think of anything more satisfying.</p>
+        </div>
+      </div>
+
+  <!-- ////////////////////////////// WHY MODAL //////////////////////////////////////////////////////// -->
+      <div class="outer-modal" onclick="modal('why')" id="why">
+        <div class="white-box">
+          <p class="x" style="position:absolute;right:12.5vw;">X</p>
+          <h1 class="written center wide">WHY</h1>
+          <p style="padding:0px 50px;">I make art because ... I want to. Enough said right? A lot of my art is based on my Christian beliefs. I believe that Christ is the solution to any of our pain. So if I can point someone towards Him through my art, and help them access His healing, I can't think of anything more satisfying.</p>
+        </div>
+      </div>
+
+  <!-- ////////////////////////////// WHEN MODAL //////////////////////////////////////////////////////// -->
+      <div class="outer-modal" onclick="modal('when')" id="when">
+        <div class="white-box">
+          <p class="x" style="position:absolute;right:12.5vw;">X</p>
+          <h1 class="written center wide">WHEN</h1>
+          <p style="padding:0px 50px;">Ever since I was a little kid I've always... oh wait, that's everyone else's story, not mine. For me, art has been a more recent passion. I strive to perfect my style. Despite how my portfolio has developed over time, expect that the best is yet to come.</p>
+        </div>
+      </div>
 
 
 
 
+<!-- ////////////////////////////// TEMPLATES //////////////////////////////////////////////////////// -->
     <div style="display:none" id="templates">
       <div id="gallery" style="width:100%; height:100%;position:relative;padding-bottom:20px;">
         <div style="background-color:#ffffff; width:100%; height:100%;position:absolute;opacity:.8;"></div>
@@ -202,9 +261,6 @@
         </div>
         <div style="width:100%;height:100%;position:relative;display:flex;flex-wrap:wrap;justify-content:space-around;overflow:scroll;" id="pics"></div>
       </div>
-      <!-- <div style="background-color:#ffffff;padding:10px;" id="pic">
-        <div class="pic"></div>
-      </div> -->
       <div class="pic trans" id="pic" onclick="enlarge(this.id)"></div>
     </div>
 

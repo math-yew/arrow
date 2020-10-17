@@ -16,6 +16,10 @@
   background-image: url("./images/bottom2.png"), url("./images/bottom.png");
 }
 
+.phone {
+  background-image: url("./images/phone.jpg");
+}
+
 /* RELIGIOUS */
 .carry {
   background-image: url("./images/carry.jpg");
