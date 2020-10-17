@@ -144,7 +144,7 @@ function enlarge(pic){
     let img = $("<img>").attr("src",url).attr("id","tempImg").addClass("safe");
     let div = $('<div style="width:100%;height:100%;z-index:35;position:fixed;" id="imageDiv"></div>');
     div.addClass("safe").attr("onclick","removeImage()");
-    let white = $('<div style="width:100%;height:100%;background-color:#000;position:absolute;opacity:.9;"></div>').addClass("safe");
+    let white = $('<div style="width:100%;height:100%;background-color:#000;position:absolute;opacity:.8;"></div>').addClass("safe");
     white.appendTo(div);
     img.appendTo(div);
     div.appendTo(".display")[0];
@@ -164,3 +164,17 @@ function enlarge(pic){
   }
   $("#tempImg").css({'width':width,'height':height})
 }
+
+function modal(id, open){
+  if(!!open){
+    $('#' + id).css({'display':'flex'});
+  } else{
+    $('#' + id).css({'display':'none'});
+  }
+}
+
+$(document).keydown(function(event) {
+  if (event.keyCode == 27) {
+    $('.outer-modal').hide();
+  }
+});
