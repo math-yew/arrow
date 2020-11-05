@@ -61,3 +61,8 @@
   90% { transform: rotate(0deg);top:450vh;}
   100% { transform: rotate(0deg);top:500vh;opacity:0}
 }
+
+@keyframes category {
+  0%   { width:0vw }
+  100%   { width:50vw }
+}
