@@ -43,7 +43,7 @@ body {
   width: 100%;
   height: 120vh;
   position: relative;
-  padding:10vw;
+  padding:5vw;
   box-sizing: border-box;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -53,6 +53,10 @@ body {
   justify-content: flex-end;
   font-size: 3em;
   color: #ffffff;
+}
+
+.some-art {
+  position:absolute;top:40px;left:57vw;
 }
 
 .arrowBack{
@@ -72,9 +76,10 @@ body {
 
 .category {
   width: 50vw;
-  height: 200px;
+  height: 30vh;
   background-position: center;
-  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-size: cover;
   position: absolute;
   top:-50px;
   left: 35vw;
@@ -85,6 +90,14 @@ body {
   font-family: Roboto-Bold;
   font-size: 2em;
   color: #fff;
+  text-shadow: 0 0 8px black;
+
+  animation-name: category;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  /* animation-direction: alternate; */
+  /* animation-iteration-count: infinite; */
 }
 
 .category:hover {
@@ -178,7 +191,7 @@ body {
   opacity: 1;
 }
 
-.trans{
+.trans {
   -webkit-transition: all 1s ease-in;
   -moz-transition: all 1s ease-in;
   -o-transition: all 1s ease-in;
@@ -238,7 +251,7 @@ body {
 .a-sq {
   position: relative;
   width: 10vw;
-  height: 200px;
+  height: 30vh;
   background-color: #aeaeae;
 }
 
@@ -369,7 +382,7 @@ body {
 
 .info p {
   font-size:1.5em;
-  padding:0px 50px;
+  padding:0px 3vw;
 }
 
 #tempImg {
@@ -411,7 +424,7 @@ body {
   background-size: contain;
   position: absolute;
   z-index: 1;
-  opacity: .2;
+  opacity: .1;
   animation-name: drift;
 
   animation-duration: 20s;
@@ -453,7 +466,8 @@ button:active {
 }
 
 .shift {
-  transform:translateY(35vh);
+  /* transform:translateY(35vh); */
+  margin-top: 35vh;
 }
 
 .arrowBack {
@@ -478,7 +492,7 @@ button:active {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(10,35,108,0.7);
   display: none;
   flex-direction:column;
   justify-content:center;
@@ -504,11 +518,25 @@ button:active {
 }
 
 .white-box {
+  width: 85vw;
+  font-size:1.5em;
   background-color: #fff;
-  width: 75vw;
-  font-size:2.5em
-  /* height: 90vh */
+  background:rgba(255,255,255,0.9);
 }
+
+.white-box h1 {
+  font-size: 2em;
+}
+
+.spacer {
+  width:100%;
+  height:50vh;
+}
+
+.hide-it {
+  display: none;
+}
+
 /* /////////////////////////////// MEDIA QUERIES ///////////////////////////////////// */
 
 @media only screen and (max-width: 1180px) {
@@ -518,9 +546,34 @@ button:active {
 }
 
 @media only screen and (max-width: 950px) {
+  .hide-it {
+    display: block;
+  }
+
+  .show-it {
+    display: none;
+  }
+
   .header {
     height: 60vh;
   }
+
+  .header h1 {
+    font-size: 1.25em;
+   }
+
+   .category {
+     height: 25vh;
+     opacity: 1;
+   }
+
+   .some-art {
+     left:50vw;
+   }
+
+   .a-sq {
+     height: 25vh;
+   }
 
   .half {
     width: 100%;
@@ -530,15 +583,21 @@ button:active {
     font-size: 1.25em;
   }
 
-  .shift {
-    transform:translateY(0vh);
+  .half h1 {
+    margin: 2px;
   }
 
+  .instagram, .etsy {
+    margin:0;
+  }
+
+  .shift {
+    margin-top: 0px;
+  }
 
   .short1{
     left: 60vw !important;
   }
-
 
   .short2{
     left: 40vw !important;
@@ -600,7 +659,7 @@ button:active {
   }
 
   .q h1 {
-    font-size: 4em;
+    /* font-size: 4em; */
     line-height: 0em;
     cursor: pointer;
   }
@@ -616,10 +675,25 @@ button:active {
   body {
     font-size: 1.25em;
   }
+
+  .cinco {
+    text-shadow: 0 0 12px #ffffff;
+    font-size: 4.5em;
+  }
+
+  button, .button{
+    font-size: 1em;
+  }
+
+  .spacer{
+    height:20vh;
+  }
+
 }
 
 @media only screen and (max-width: 605px) {
   .header {
-    height: 30vh;
+    /* height: 30vh; */
   }
+
 }
