@@ -16,6 +16,9 @@ setTimeout(function () {
   window.scrollTo(0, position + move);
   window.scrollTo(0, position);
 },20);
+
+let falling = false;
+
 $(window).on('scroll', function() {
   var winScroll = $(this).scrollTop();
 
@@ -51,10 +54,16 @@ $(window).on('scroll', function() {
     'opacity': fade(200,500,"end",.5)
   });
 
+
   expand('.slide1', null,'cat-width', winScroll, null, true);
   expand('.slide2', null,'cat-width', winScroll, null, true);
   expand('.slide3', null,'cat-width', winScroll, null, true);
-  expand('.short6','dummy','falling', winScroll, ".shortened");
+
+  console.log("FALLING: " + falling);
+
+  if(!falling){
+    expand('.short6','dummy','falling', winScroll, ".shortened");
+  }
 
   function expand(e, inactive, active, ws, other, stay) {
     // console.log("yo" + winHeight);
@@ -65,10 +74,16 @@ $(window).on('scroll', function() {
     if(ws > pos - winHeight * .8 && upper) {
       $(e).addClass(active);
       $(e).removeClass(inactive);
+      if(e == '.shortened'){
+        falling = true;
+        console.log("FALLING: " + falling);
+        setTimeout(()=> falling=false, 6000);
+      }
     } else if (stay){
     } else {
       $(e).addClass(inactive);
       $(e).removeClass(active);
+      falling = false;
     }
   }
 
