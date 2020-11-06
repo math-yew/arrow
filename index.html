@@ -103,8 +103,8 @@
 
     <div class="me">
       <div class="arrowBack" style="overflow:visible;">
-        <div style="width:100%;height:5vh;float:left;"></div>
-        <div class="half" style="padding:0vw 0">
+        <div style="width:100%;height:10vh;float:left;"></div>
+        <div class="half" style="padding:0vw 0;overflow:visible;">
           <div class="a-str shortened short1" style="transform:rotate(45deg);top:0vw;left:30vw;"></div>
           <h1 class="written center">Who am I?</h1>
           <div  class="info">
@@ -160,15 +160,17 @@
 
 <!-- ////////////////////////////////////////////  ME ///////////////////////////////////////////////// -->
 
-      <div class="arrowBack bottom pen" style="width:70vw;height:100vh;padding:0 15vw;">
-        <h1 class="written center"  style="transform: translateY(-0vw)">LET'S TALK</h1>
-        <div class="info">
-          <p class="center">Click the button below if you'd like to message me.</p>
-          <p class="center">If you have any thoughts about my work I'd love to hear about it. Is there more of a certain style or concept you'd like to see more of? Interested in having a commission work made? Is there anything I might be able to help you with?</p>
-        </div>
-        <br/>
-        <div style="position:relative;width:100%;">
-          <button class="button" style="position:absolute;left:50%;transform: translateX(-50%)" type="button" onclick="modal('message',true)" name="button">Message Me</button>
+      <div class="arrowBack bottom pen" style="width:90vw;height:100vh;padding:0 5vw;display:flex;justify-content:center;align-items:center;">
+        <div>
+          <h1 class="written center"  style="transform: translateY(-0vw)">LET'S TALK</h1>
+          <div class="info">
+            <p class="center">Click the button below if you'd like to message me.</p>
+            <p class="center" style="color:#003dd6">If you have any thoughts about my work I'd love to hear about it. Is there more of a certain style or concept you'd like to see more of? Interested in having a commission work made? Is there anything I might be able to help you with?</p>
+          </div>
+          <br/>
+          <div style="position:relative;width:100%;">
+            <button class="button" style="position:absolute;left:50%;transform: translateX(-50%)" type="button" onclick="modal('message',true)" name="button">Message Me</button>
+          </div>
         </div>
       </div>
 
@@ -183,7 +185,7 @@
       </div>
 
   <!-- ////////////////////////////// WALLPAPER MODAL //////////////////////////////////////////////////////// -->
-      <div class="outer-modal" id="wallpaper" style="font-size:1.5em;overflow:auto">
+      <div class="outer-modal" id="wallpaper" style="font-size:1.0em;overflow:auto">
         <div class="modal-width" style="">
           <p class="x" onclick="modal('wallpaper')" style="transform:translateX(100%);font-size:1.75em;color:#ffffff;">X</p>
         </div>

@@ -54,7 +54,7 @@ $(window).on('scroll', function() {
   expand('.slide1', null,'cat-width', winScroll, null, true);
   expand('.slide2', null,'cat-width', winScroll, null, true);
   expand('.slide3', null,'cat-width', winScroll, null, true);
-  expand('.pen','dummy','falling', winScroll, ".shortened");
+  expand('.short6','dummy','falling', winScroll, ".shortened");
 
   function expand(e, inactive, active, ws, other, stay) {
     // console.log("yo" + winHeight);
