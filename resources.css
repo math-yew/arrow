@@ -55,11 +55,21 @@
   100% {transform: translate(-45%,-5%)}
 }
 
+@keyframes q-drift {
+  0%   {transform: translate(-50%, -100%) rotate(-15deg)}
+  25%   {transform: translate(-5%, -70%) rotate(-15deg)}
+  50%   {transform: translate(40%, -120%) rotate(-15deg)}
+  75%   {transform: translate(60%, -80%) rotate(-15deg)}
+  100%   {transform: translate(90%, -105%) rotate(-15deg)}
+}
+
 @keyframes falling {
   0%   { top:0px;}
   50% { transform: top:150vh;}
-  90% { transform: rotate(0deg);top:450vh;}
-  100% { transform: rotate(0deg);top:500vh;opacity:0}
+  85% { transform: rotate(0deg);top:450vh;}
+  90% { transform: rotate(0deg);top:500vh;opacity:0}
+  91% { top:-25vh;opacity:0}
+  100% { top:0px;opacity:1}
 }
 
 @keyframes category {
