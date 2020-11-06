@@ -43,9 +43,6 @@ $(window).on('scroll', function() {
     'top': -winScroll/20+'px'
   });
 
-  // console.log("SCROLL: "+winScroll);
-  // console.log($('.expand').position().top);
-
   $('.p1').css({
     'opacity': fade(200,500,"start",.5)
   });
@@ -54,22 +51,21 @@ $(window).on('scroll', function() {
     'opacity': fade(200,500,"end",.5)
   });
 
-  // expand('.e1','hidden','expanded', winScroll);
-  // expand('.e2','hidden','expanded', winScroll);
+  expand('.slide1', null,'cat-width', winScroll, null, true);
+  expand('.slide2', null,'cat-width', winScroll, null, true);
+  expand('.slide3', null,'cat-width', winScroll, null, true);
+  expand('.short6','dummy','falling', winScroll, ".shortened");
 
-  expand('.pen','dummy','falling', winScroll, ".shortened");
-
-  function expand(e, inactive, active, ws, other) {
+  function expand(e, inactive, active, ws, other, stay) {
     // console.log("yo" + winHeight);
-    let pos = $(e).position().top;
-    // console.log("HEY: " + pos*1+666 );
-    // console.log($(e).position().top - winHeight * .8 + " < " + ws + " < " + $(e).position().top - winHeight*.2);
+    let pos = $(e).offset().top;
     e = (!other) ? e : other;
     let upper = ws < pos - winHeight*.2;
     upper = (!other) ? upper : true;
     if(ws > pos - winHeight * .8 && upper) {
       $(e).addClass(active);
       $(e).removeClass(inactive);
+    } else if (stay){
     } else {
       $(e).addClass(inactive);
       $(e).removeClass(active);
