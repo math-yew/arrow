@@ -716,8 +716,8 @@ button:active {
 }
 
 @media only screen and (max-width: 605px) {
-  .header {
-    /* height: 30vh; */
+  .rotate{
+    font-size: 1.75em;
   }
 
 }
