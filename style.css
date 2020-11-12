@@ -347,7 +347,12 @@ body {
 }
 
 .rotate{
+  color: #ffffff;
+  font-size: 3em;
   background-color: #345ec7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .rotate:before{

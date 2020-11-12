@@ -1,7 +1,25 @@
 // totHeight = window.screen.availHeight;
 // totWidth = window.screen.availWidth;
 
-
+window.onpopstate = function() {
+  let hash = location.hash;
+  console.log("hash:" + hash);
+  setTimeout(()=>{
+    if(hash.length == 0){
+      let clickArray = [".outer-modal",".x"];
+      for (var i = 0; i < clickArray.length; i++) {
+        let elements = $(clickArray[i])
+        for (var j = 0; j < elements.length; j++) {
+          console.log("elements " + j);
+          elements[j].click();
+        }
+      }
+    }
+    if(!!$("#gallery") && hash.length == 0){
+      $("#gallery").click();
+    }
+  },100);
+}
 
 let docHeight = document.documentElement.scrollHeight;
 let previous = 0;
@@ -54,12 +72,9 @@ $(window).on('scroll', function() {
     'opacity': fade(200,500,"end",.5)
   });
 
-
   expand('.slide1', null,'cat-width', winScroll, null, true);
   expand('.slide2', null,'cat-width', winScroll, null, true);
   expand('.slide3', null,'cat-width', winScroll, null, true);
-
-  console.log("FALLING: " + falling);
 
   if(!falling){
     expand('.short6','dummy','falling', winScroll, ".shortened");
@@ -115,7 +130,11 @@ function category(cat,tar){
         e.text(cat.toUpperCase());
         e.removeClass("display");
         window.scrollTo(0, lastPosition);
+        if(location.hash == "#images"){
+          window.history.back();
+        }
       } else {
+        window.location.hash = '#images';
         lastPosition = document.documentElement.scrollTop;
         e.empty();
         e.addClass("display");
@@ -178,9 +197,13 @@ function enlarge(pic){
 
 function modal(id, open){
   if(!!open){
+    window.location.hash = '#modal';
     $('#' + id).css({'display':'flex'});
   } else{
     $('#' + id).css({'display':'none'});
+    if(location.hash == "#modal"){
+      window.history.back();
+    }
   }
 }
 
