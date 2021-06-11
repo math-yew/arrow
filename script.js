@@ -40,6 +40,8 @@ let falling = false;
 $(window).on('scroll', function() {
   var winScroll = $(this).scrollTop();
 
+
+
   let winHeight = $(this).innerHeight();
   let scrollLength = docHeight-winHeight;
 
@@ -49,6 +51,11 @@ $(window).on('scroll', function() {
 
   let degree = 90*(shifting + 1 - (1-z)*4/2)*z+90;
   // console.log("degree: " + degree);
+
+  if(winScroll > 0){
+    $("#ivf").removeClass("invisible");
+    $("#ivf").addClass("visible");
+  }
 
   $('.rotate').css({
     'transform': 'translate(' + -100 *shifting + '%,' + 100  * shifting + '%) scale('+(.5+.25*(1-Math.abs(shifting))*z)+') rotate(-45deg) rotateY('+degree+'deg)',

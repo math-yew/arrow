@@ -561,6 +561,31 @@ button:active {
   overflow-y: hidden;
 }
 
+#ivf {
+  padding: 10px;
+  background-color: yellow;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  font-size: 2em;
+  z-index: 1000;
+  border-radius: 100px;
+  transition: 1s;
+}
+
+.invisible {
+  display: none;
+}
+
+.visible {
+  display: block;
+  animation-name: visible;
+  animation-duration: 1.3s;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+}
+
 /* /////////////////////////////// MEDIA QUERIES ///////////////////////////////////// */
 
 @media only screen and (max-width: 1180px) {
